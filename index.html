@@ -24,7 +24,7 @@
     border-radius: 24px;
     padding: 40px 30px;
     width: 100%;
-    max-width: 520px;
+    max-width: 480px;
     text-align: center;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
   }
@@ -42,10 +42,9 @@
   }
 
   .result-section {
-    margin-bottom: 24px;
-    min-height: 80px;
+    margin-bottom: 30px;
+    min-height: 70px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -59,13 +58,13 @@
   }
 
   .ball {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
@@ -77,44 +76,32 @@
   .ball::after {
     content: '';
     position: absolute;
-    top: 6px;
-    left: 12px;
-    width: 12px;
-    height: 8px;
+    top: 7px;
+    left: 13px;
+    width: 13px;
+    height: 9px;
     background: rgba(255,255,255,0.35);
     border-radius: 50%;
     transform: rotate(-20deg);
   }
 
   .ball:nth-child(1) { animation-delay: 0s; }
-  .ball:nth-child(2) { animation-delay: 0.08s; }
-  .ball:nth-child(3) { animation-delay: 0.16s; }
-  .ball:nth-child(4) { animation-delay: 0.24s; }
-  .ball:nth-child(5) { animation-delay: 0.32s; }
-  .ball:nth-child(6) { animation-delay: 0.40s; }
-
-  .plus {
-    font-size: 1.4rem;
-    color: rgba(255,255,255,0.5);
-    font-weight: 300;
-    animation: popIn 0.4s 0.48s both;
-  }
-
-  .bonus {
-    animation-delay: 0.56s !important;
-    border: 2px dashed rgba(255,255,255,0.4);
-  }
+  .ball:nth-child(2) { animation-delay: 0.1s; }
+  .ball:nth-child(3) { animation-delay: 0.2s; }
+  .ball:nth-child(4) { animation-delay: 0.3s; }
+  .ball:nth-child(5) { animation-delay: 0.4s; }
+  .ball:nth-child(6) { animation-delay: 0.5s; }
 
   @keyframes popIn {
     0% { transform: scale(0); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
   }
 
-  .range-1  { background: linear-gradient(135deg, #fbc531, #e1b12c); }
-  .range-2  { background: linear-gradient(135deg, #0097e6, #0984e3); }
-  .range-3  { background: linear-gradient(135deg, #e84118, #c0392b); }
-  .range-4  { background: linear-gradient(135deg, #8c7ae6, #6c5ce7); }
-  .range-5  { background: linear-gradient(135deg, #44bd32, #27ae60); }
+  .range-1 { background: linear-gradient(135deg, #fbc531, #e1b12c); }
+  .range-2 { background: linear-gradient(135deg, #0097e6, #0984e3); }
+  .range-3 { background: linear-gradient(135deg, #e84118, #c0392b); }
+  .range-4 { background: linear-gradient(135deg, #8c7ae6, #6c5ce7); }
+  .range-5 { background: linear-gradient(135deg, #44bd32, #27ae60); }
 
   .btn {
     background: linear-gradient(135deg, #e74c3c, #c0392b);
@@ -140,76 +127,16 @@
     box-shadow: 0 4px 12px rgba(231,76,60,0.3);
   }
 
-  .history {
-    margin-top: 30px;
-    text-align: left;
-  }
-
-  .history h3 {
-    color: rgba(255,255,255,0.6);
-    font-size: 0.85rem;
-    margin-bottom: 12px;
-    font-weight: 500;
-    letter-spacing: 1px;
-  }
-
-  .history-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-    padding: 10px 0;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    animation: fadeIn 0.3s ease;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-6px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .history-item .mini-ball {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
-  }
-
-  .history-item .mini-plus {
-    color: rgba(255,255,255,0.3);
-    font-size: 0.9rem;
-  }
-
-  .history-item .mini-bonus {
-    border: 1.5px dashed rgba(255,255,255,0.35);
-  }
-
-  .set-label {
-    color: rgba(255,255,255,0.3);
-    font-size: 0.75rem;
-    width: 28px;
-    flex-shrink: 0;
-  }
-
   .empty-msg {
     color: rgba(255,255,255,0.25);
     font-size: 0.85rem;
-    text-align: center;
-    padding: 16px 0;
   }
 
   @media (max-width: 420px) {
     .container { padding: 28px 16px; }
     h1 { font-size: 1.4rem; }
-    .ball { width: 44px; height: 44px; font-size: 1rem; }
+    .ball { width: 46px; height: 46px; font-size: 1.05rem; }
     .btn { padding: 12px 36px; font-size: 1rem; }
-    .history-item .mini-ball { width: 28px; height: 28px; font-size: 0.7rem; }
   }
 </style>
 </head>
@@ -225,19 +152,10 @@
     </div>
   </div>
 
-  <button class="btn" id="generateBtn" onclick="generate()">번호 생성</button>
-
-  <div class="history">
-    <h3>HISTORY</h3>
-    <div id="history">
-      <p class="empty-msg">아직 생성된 번호가 없습니다</p>
-    </div>
-  </div>
+  <button class="btn" onclick="generate()">번호 생성</button>
 </div>
 
 <script>
-  const history = [];
-
   function getColorClass(n) {
     if (n <= 10) return 'range-1';
     if (n <= 20) return 'range-2';
@@ -249,72 +167,20 @@
   function generate() {
     const pool = Array.from({length: 45}, (_, i) => i + 1);
     const picked = [];
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 6; i++) {
       const idx = Math.floor(Math.random() * pool.length);
       picked.push(pool.splice(idx, 1)[0]);
     }
+    picked.sort((a, b) => a - b);
 
-    const main = picked.slice(0, 6).sort((a, b) => a - b);
-    const bonus = picked[6];
-
-    // 메인 영역
     const ballsEl = document.getElementById('balls');
     ballsEl.innerHTML = '';
 
-    main.forEach(n => {
+    picked.forEach(n => {
       const el = document.createElement('div');
       el.className = `ball ${getColorClass(n)}`;
       el.textContent = n;
       ballsEl.appendChild(el);
-    });
-
-    const plus = document.createElement('span');
-    plus.className = 'plus';
-    plus.textContent = '+';
-    ballsEl.appendChild(plus);
-
-    const bonusEl = document.createElement('div');
-    bonusEl.className = `ball bonus ${getColorClass(bonus)}`;
-    bonusEl.textContent = bonus;
-    ballsEl.appendChild(bonusEl);
-
-    // 히스토리
-    history.unshift({ main, bonus });
-    if (history.length > 5) history.pop();
-    renderHistory();
-  }
-
-  function renderHistory() {
-    const el = document.getElementById('history');
-    el.innerHTML = '';
-
-    history.forEach((item, i) => {
-      const row = document.createElement('div');
-      row.className = 'history-item';
-
-      const label = document.createElement('span');
-      label.className = 'set-label';
-      label.textContent = `#${i + 1}`;
-      row.appendChild(label);
-
-      item.main.forEach(n => {
-        const b = document.createElement('span');
-        b.className = `mini-ball ${getColorClass(n)}`;
-        b.textContent = n;
-        row.appendChild(b);
-      });
-
-      const plus = document.createElement('span');
-      plus.className = 'mini-plus';
-      plus.textContent = '+';
-      row.appendChild(plus);
-
-      const bonus = document.createElement('span');
-      bonus.className = `mini-ball mini-bonus ${getColorClass(item.bonus)}`;
-      bonus.textContent = item.bonus;
-      row.appendChild(bonus);
-
-      el.appendChild(row);
     });
   }
 </script>
